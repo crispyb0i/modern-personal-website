@@ -9,12 +9,12 @@ import { motion } from "framer-motion"
 
 const projects = [
     {
-        title: "Social Game",
-        description: "The ultimate low poly social game that allows you to connect with friends and explore the world.",
-        tags: ["Vite", "Tailwind", "Three.js", "Socket.io", "Firebase"],
-        demoUrl: "#",
+        title: "WebOS",
+        description: "A browser-based desktop operating system with a full window management system, file explorer, and built-in apps.",
+        tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Zustand"],
+        demoUrl: "https://web-os-one-rust.vercel.app/", // or your actual demo URL
         repoUrl: "#",
-        image: "https://res.cloudinary.com/dorue74c9/image/upload/v1745272664/upscaledDreamMapprLogo_yb0iva.png",
+        image: "https://res.cloudinary.com/dorue74c9/image/upload/v1763587897/5efe389b-9b37-477e-a6e7-f57e3ba8cca2_bnigxt.png", // we could create a screenshot
     },
     {
         title: "Dream Mappr",
@@ -26,10 +26,10 @@ const projects = [
     },
     {
         title: "Shinflix",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+        description: "A sleek media discovery platform for finding your next favorite movie or TV show. Search thousands of titles, explore detailed pages, and more!",
         tags: ["Next.js", "Tailwind", "TMDB API"],
         demoUrl: "https://shinflix.vercel.app",
-        repoUrl: "https://github.com/crispyb0i/shinflix",
+        repoUrl: "#",
         image: "https://res.cloudinary.com/dorue74c9/image/upload/v1745272557/Untitled_design_a54ke0.png",
     },
 ]
@@ -58,7 +58,7 @@ export function Projects() {
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                                 {/* Project Image */}
-                                <div className="w-full h-48 bg-muted/30 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <div className="w-full h-56 bg-muted/30 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
                                     <img
                                         src={project.image}
                                         alt={project.title}
@@ -70,7 +70,7 @@ export function Projects() {
                                     <CardTitle className="group-hover:text-blue-600 transition-colors duration-300">{project.title}</CardTitle>
                                     <CardDescription className="line-clamp-3">{project.description}</CardDescription>
                                 </CardHeader>
-                                <CardContent className="flex-1 relative z-10">
+                                <CardContent className="flex-1 relative z-10 px-6 pb-6 pt-4">
                                     <div className="flex flex-wrap gap-2">
                                         {project.tags.map((tag) => (
                                             <span key={tag} className="px-2 py-1 text-xs rounded-full bg-secondary/50 border border-border/50 text-secondary-foreground group-hover:bg-blue-500/10 group-hover:text-blue-600 group-hover:border-blue-200 transition-colors duration-300">

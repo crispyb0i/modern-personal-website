@@ -7,7 +7,7 @@ export function Footer() {
             <div className="container flex flex-col items-center justify-between gap-6 md:flex-row">
                 <div className="flex flex-col gap-2 text-center md:text-left">
                     <p className="text-sm text-muted-foreground">
-                        © {new Date().getFullYear()} DevPortfolio. All rights reserved.
+                        © {new Date().getFullYear()} david-sh.in. All rights reserved.
                     </p>
                 </div>
 

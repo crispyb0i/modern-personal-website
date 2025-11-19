@@ -83,9 +83,9 @@ export function Contact() {
                         <Card className="bg-background/60 backdrop-blur-sm border-border/50">
                             <CardHeader>
                                 <CardTitle>Contact Information</CardTitle>
-                                <CardDescription>
+                                {/* <CardDescription>
                                     Feel free to reach out through any of these channels.
-                                </CardDescription>
+                                </CardDescription> */}
                             </CardHeader>
                             <CardContent className="space-y-6">
                                 <div className="flex items-center gap-4 group">
