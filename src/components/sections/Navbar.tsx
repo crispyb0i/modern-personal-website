@@ -3,7 +3,6 @@
 import * as React from "react"
 import Link from "next/link"
 import { Menu, X, Code2 } from "lucide-react"
-import { Button } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
 import { motion, useScroll, useSpring } from "framer-motion"
 
@@ -58,9 +57,6 @@ export function Navbar() {
                             {item.name}
                         </Link>
                     ))}
-                    <Button asChild size="sm">
-                        <Link href="/resume.pdf">Resume</Link>
-                    </Button>
                 </nav>
 
                 {/* Mobile Nav Toggle */}
@@ -92,9 +88,6 @@ export function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-                        <Button asChild className="w-full">
-                            <Link href="/resume.pdf">Resume</Link>
-                        </Button>
                     </nav>
                 </div>
             )}
