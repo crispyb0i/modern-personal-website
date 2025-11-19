@@ -5,6 +5,15 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if API key is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { error: 'Email service is not configured. Please check server configuration.' },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
     const { name, email, message } = body;
 
@@ -26,8 +35,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email using Resend
+    // Using verified domain: david-sh.in
     const { data, error } = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // You'll need to verify your domain in Resend
+      from: 'Contact Form <noreply@david-sh.in>', // Using verified domain
       to: ['dvdshn@proton.me'], // Your email address
       replyTo: email,
       subject: `New Contact Form Message from ${name}`,
@@ -59,8 +69,14 @@ ${message}
 
     if (error) {
       console.error('Resend error:', error);
+      // Extract more detailed error message
+      const errorMessage = error.message || JSON.stringify(error);
       return NextResponse.json(
-        { error: 'Failed to send email', details: error },
+        { 
+          error: 'Failed to send email', 
+          details: errorMessage,
+          fullError: process.env.NODE_ENV === 'development' ? error : undefined
+        },
         { status: 500 }
       );
     }
@@ -71,8 +87,13 @@ ${message}
     );
   } catch (error) {
     console.error('API error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { 
+        error: 'Internal server error',
+        details: errorMessage,
+        fullError: process.env.NODE_ENV === 'development' ? String(error) : undefined
+      },
       { status: 500 }
     );
   }

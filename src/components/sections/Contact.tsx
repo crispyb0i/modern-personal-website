@@ -44,7 +44,9 @@ export function Contact() {
             const data = await response.json()
 
             if (!response.ok) {
-                throw new Error(data.error || "Failed to send message")
+                // Show more detailed error message
+                const errorMsg = data.details || data.error || "Failed to send message"
+                throw new Error(errorMsg)
             }
 
             setSubmitStatus({
