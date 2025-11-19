@@ -56,9 +56,9 @@ export function Hero() {
                         className="flex flex-col gap-4 sm:flex-row justify-center md:justify-start"
                     >
                         <Magnetic>
-                            <Button asChild size="lg" className="gap-2">
+                            <Button asChild size="lg" variant="outline" className="gap-2">
                                 <Link href="#projects">
-                                    View My Work <ArrowRight className="h-4 w-4" />
+                                    View My Work
                                 </Link>
                             </Button>
                         </Magnetic>

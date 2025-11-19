@@ -5,6 +5,23 @@ import * as d3 from "d3"
 import { Code2, Palette, Zap, Terminal, Cpu, Globe } from "lucide-react"
 import { motion } from "framer-motion"
 
+// Hook to detect if we're on mobile
+function useIsMobile() {
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768) // md breakpoint
+        }
+        
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
+    }, [])
+
+    return isMobile
+}
+
 interface Node extends d3.SimulationNodeDatum {
     id: string
     r: number
@@ -25,8 +42,11 @@ export function FloatingIcons() {
     const containerRef = useRef<HTMLDivElement>(null)
     const [nodes, setNodes] = useState<Node[]>([])
     const mouseRef = useRef<{ x: number; y: number } | null>(null)
+    const isMobile = useIsMobile()
 
     useEffect(() => {
+        // Don't initialize on mobile
+        if (isMobile || !containerRef.current) return
         if (!containerRef.current) return
 
         let simulation: d3.Simulation<Node, undefined> | null = null
@@ -138,7 +158,10 @@ export function FloatingIcons() {
             resizeObserver.disconnect()
             window.removeEventListener("mousemove", handleMouseMove)
         }
-    }, [])
+    }, [isMobile])
+
+    // Don't render on mobile
+    if (isMobile) return null
 
     return (
         <div ref={containerRef} className="absolute inset-0 w-full h-full pointer-events-none">

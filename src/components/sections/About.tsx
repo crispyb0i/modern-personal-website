@@ -16,8 +16,8 @@ export function About() {
             <div className="flex flex-col gap-8 relative z-10">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left Column: Image */}
-                    <div className="relative group">
-                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative group w-full">
+                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block" />
                         <div className="relative w-full max-w-md mx-auto overflow-hidden rounded-2xl border border-border/50 shadow-2xl">
                             <img
                                 src="https://res.cloudinary.com/dorue74c9/image/upload/v1745268882/IMG_20180811_111853_stgnop.jpg"
@@ -28,9 +28,9 @@ export function About() {
                     </div>
 
                     {/* Right Column: Bio & Details */}
-                    <div className="space-y-8">
-                        <div className="w-full">
-                            <CodeWindow className="w-full h-full min-h-[400px]" />
+                    <div className="space-y-8 w-full">
+                        <div className="w-full overflow-hidden">
+                            <CodeWindow className="w-full min-h-[300px] md:min-h-[400px]" />
                         </div>
                     </div>
                 </div>
