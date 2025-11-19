@@ -1,0 +1,11 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="180" height="180" rx="40" fill="#0a0a0a"/>
+  <!-- Code2 icon style: opening bracket - white -->
+  <path d="M51 45L28 90L51 135" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Closing bracket -->
+  <path d="M129 45L152 90L129 135" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Slash in middle -->
+  <path d="M73 56L107 124" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
