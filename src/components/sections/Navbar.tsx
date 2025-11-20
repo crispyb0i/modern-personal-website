@@ -76,7 +76,7 @@ export function Navbar() {
 
             {/* Mobile Nav Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-16 left-0 w-full bg-background border-b border-border p-4 shadow-lg animate-in slide-in-from-top-5">
+                <div className="md:hidden absolute top-16 left-0 w-full bg-background backdrop-blur-md border-b border-border p-4 shadow-lg animate-in slide-in-from-top-5" style={{ backgroundColor: 'var(--background)' }}>
                     <nav className="flex flex-col gap-4">
                         {navItems.map((item) => (
                             <Link
