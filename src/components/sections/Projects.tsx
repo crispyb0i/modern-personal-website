@@ -9,6 +9,14 @@ import { motion } from "framer-motion"
 
 const projects = [
     {
+        title: "NEOSOCIAL",
+        description: "A neobrutalist social media platform where bold design meets powerful features.",
+        tags: ["React", "TypeScript", "Vite", "Zustand", "Supabase"],
+        demoUrl: "https://neosocial-j4q9.vercel.app/", // or your actual demo URL
+        repoUrl: "#",
+        image: "https://res.cloudinary.com/dorue74c9/image/upload/v1763698495/fcb5ab2d-1c93-49c3-833d-e9100882b748_roqsbd.png", // we could create a screenshot
+    },
+    {
         title: "WebOS",
         description: "A browser-based desktop operating system with a full window management system, file explorer, and built-in apps.",
         tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Zustand"],
@@ -24,14 +32,14 @@ const projects = [
         repoUrl: "#",
         image: "https://res.cloudinary.com/dorue74c9/image/upload/v1745272664/upscaledDreamMapprLogo_yb0iva.png",
     },
-    {
-        title: "Shinflix",
-        description: "A sleek media discovery platform for finding your next favorite movie or TV show. Search thousands of titles, explore detailed pages, and more!",
-        tags: ["Next.js", "Tailwind", "TMDB API"],
-        demoUrl: "https://shinflix.vercel.app",
-        repoUrl: "#",
-        image: "https://res.cloudinary.com/dorue74c9/image/upload/v1745272557/Untitled_design_a54ke0.png",
-    },
+    // {
+    //     title: "Shinflix",
+    //     description: "A sleek media discovery platform for finding your next favorite movie or TV show. Search thousands of titles, explore detailed pages, and more!",
+    //     tags: ["Next.js", "Tailwind", "TMDB API"],
+    //     demoUrl: "https://shinflix.vercel.app",
+    //     repoUrl: "#",
+    //     image: "https://res.cloudinary.com/dorue74c9/image/upload/v1745272557/Untitled_design_a54ke0.png",
+    // },
 ]
 
 export function Projects() {
@@ -41,7 +49,7 @@ export function Projects() {
                 <div className="text-center max-w-2xl mx-auto space-y-4">
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Featured Projects</h2>
                     <p className="text-muted-foreground">
-                        Here are some of the projects I've worked on recently.
+                        Here are some of the projects I&apos;ve worked on recently.
                     </p>
                 </div>
 
@@ -58,7 +66,7 @@ export function Projects() {
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                                 {/* Project Image */}
-                                <div className="w-full h-56 bg-muted/30 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <div className="w-full h-72 bg-muted/30 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
                                     <img
                                         src={project.image}
                                         alt={project.title}
