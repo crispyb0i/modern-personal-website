@@ -32,14 +32,22 @@ const projects = [
         repoUrl: "#",
         image: "https://res.cloudinary.com/dorue74c9/image/upload/v1745272664/upscaledDreamMapprLogo_yb0iva.png",
     },
-    // {
-    //     title: "Shinflix",
-    //     description: "A sleek media discovery platform for finding your next favorite movie or TV show. Search thousands of titles, explore detailed pages, and more!",
-    //     tags: ["Next.js", "Tailwind", "TMDB API"],
-    //     demoUrl: "https://shinflix.vercel.app",
-    //     repoUrl: "#",
-    //     image: "https://res.cloudinary.com/dorue74c9/image/upload/v1745272557/Untitled_design_a54ke0.png",
-    // },
+    {
+        title: "Mythic Triad",
+        description: "A web-based card game based off the game 'Triple Triad' from the Final Fantasy series.",
+        tags: ["Next.js", "Tailwind", "Firebase"],
+        demoUrl: "https://card-game-three-rouge.vercel.app/",
+        repoUrl: "#",
+        image: "https://res.cloudinary.com/dorue74c9/image/upload/v1764369581/222b42d9-602d-45ac-bded-0cb0c283e03e_t2ohzm.png",
+    },
+    {
+        title: "Shinflix",
+        description: "A sleek media discovery platform for finding your next favorite movie or TV show. Search thousands of titles, explore detailed pages, and more!",
+        tags: ["Next.js", "Tailwind", "TMDB API"],
+        demoUrl: "https://shinflix.vercel.app",
+        repoUrl: "#",
+        image: "https://res.cloudinary.com/dorue74c9/image/upload/v1745272557/Untitled_design_a54ke0.png",
+    },
 ]
 
 export function Projects() {
